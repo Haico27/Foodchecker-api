@@ -1,4 +1,5 @@
 {
-  "host": "foodchecker-api-app.feathersjs.com",
-  "port": "PORT"
+  "host": "foodchecker-api.herokuapp.com",
+  "port": "PORT",
+  "mongodb": "MONGODB_URI"
 }
