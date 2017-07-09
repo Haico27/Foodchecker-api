@@ -6,5 +6,30 @@
     "default": 10,
     "max": 50
   },
-  "mongodb": "mongodb://localhost:27017/foodchecker_api"
+  "mongodb": "mongodb://localhost:27017/foodchecker_api",
+  "authentication": {
+    "secret": "4a3f8ab49a092c4f9df61b0e17419dfb8e592e5a4b0d4f17551f8b0e935c0b1a084bd7e609628300997a8e53aa53bc7a97ae58d97ff24d4d7aca27d9c0d098f954e1e3f396ddea3b059edacd5882c0048bef4ab3b9a39cb8f0a01cbb2936c258066c1973ed0952c4480771c22fc38a7f1c3566c12d595d2d0aec67ba3dfa087eb86107f399a2676d51b26704c7d1dc501fac9a36d8f6ac1919519f5314e6674758dcc5bd6d80b43c337a6570e3535fe894a4f94bed6b770e3806a93873c20efc9d4e3d249411add64b50049bc0507553232a3f49b164539bd5a8b226a4167efda9a53dbf4d33d416049dacaf85ec59a286f95dfa7e92d6cfeb8b95b4377389fd",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "type": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "service": "users",
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  }
 }
