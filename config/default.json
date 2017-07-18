@@ -19,7 +19,7 @@
       "header": {
         "type": "access"
       },
-      "audience": "https://localhost:3030",
+      "audience": "https://foodchecker-api.herokuapp.com",
       "subject": "anonymous",
       "issuer": "feathers",
       "algorithm": "HS256",
